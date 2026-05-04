@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>象棋骰子</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="game-shell" aria-label="象棋骰子游戏">
+        <div class="board-panel">
+          <div class="board-wrap">
+            <div id="board" class="board" aria-label="棋盘"></div>
+          </div>
+        </div>
+
+        <aside class="side-panel">
+          <div class="title-block">
+            <p class="eyebrow">单人运气战</p>
+            <h1>象棋骰子</h1>
+          </div>
+
+          <div class="status-grid">
+            <div>
+              <span>骰子</span>
+              <strong id="diceValue">-</strong>
+            </div>
+            <div>
+              <span>我方血量</span>
+              <strong id="hpValue">5</strong>
+            </div>
+            <div>
+              <span>敌将高度</span>
+              <strong id="bossValue">0</strong>
+            </div>
+            <div>
+              <span>路线</span>
+              <strong id="routeValue">底线</strong>
+            </div>
+          </div>
+
+          <button id="rollButton" class="dice-button" type="button" aria-label="掷骰子">
+            <span id="diceFace" class="dice-face">?</span>
+          </button>
+
+          <div class="controls">
+            <button id="restartButton" type="button">重新开始</button>
+            <label class="switch">
+              <input id="autoRoll" type="checkbox" />
+              <span class="slider" aria-hidden="true"></span>
+              <span>自动掷骰子</span>
+            </label>
+          </div>
+
+          <div id="message" class="message" role="status">点击骰子开始。</div>
+
+          <div class="log-box" aria-label="游戏日志">
+            <h2>战况</h2>
+            <ol id="logList"></ol>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

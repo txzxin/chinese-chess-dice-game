@@ -1,0 +1,12 @@
+{
+  "name": "chinese-chess-dice-game",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "check": "node --check script.js",
+    "test:smoke": "playwright test tests/smoke.spec.js --reporter=list"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.59.1"
+  }
+}
